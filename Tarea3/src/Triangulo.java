@@ -1,3 +1,4 @@
+import java.lang.Comparable;
 public class Triangulo extends Figura implements Comparable<Figura>{
     private double base;
     private double altura;
@@ -8,7 +9,7 @@ public class Triangulo extends Figura implements Comparable<Figura>{
         this.altura = altura;
     }
     @Override
-    public int CompareTo(Figura PorComparar) {
+    public int compareTo(Figura PorComparar) {
         double areaPorComparar = PorComparar.calcularArea();
         double miArea = this.calcularArea();
         if(miArea==areaPorComparar){
@@ -19,7 +20,7 @@ public class Triangulo extends Figura implements Comparable<Figura>{
         }else if (miArea > areaPorComparar){
             return 1;
         }else{
-            return -1; // areas diferentes
+            return -1; // areas de porComparar es mas pequeña
         }
     }
     @Override
@@ -30,6 +31,7 @@ public class Triangulo extends Figura implements Comparable<Figura>{
     public int lados() {
         return 3;
     }
+    
 
 
 }

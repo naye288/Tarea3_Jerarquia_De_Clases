@@ -24,18 +24,18 @@ public class App {
         Arrays.sort(circle);
 
         //Pruebas 
-        System.out.println("Triangulo 1 comparado Triangulo 2: "); // retorna 1
-        System.out.print(trian[1].CompareTo(trian[2]));
-        System.out.println("\nTriangulo 3 comparado Rectangulo 2: "); // retorna 0
-        System.out.print(trian[3].CompareTo(rects[2]));
+        System.out.println("Triangulo 1 comparado Triangulo 2: "); // retorna -1
+        System.out.print(trian[1].compareTo(trian[2]));
+        System.out.println("\nTriangulo 3 comparado Rectangulo 2: "); // retorna 1
+        System.out.print(trian[3].compareTo(rects[2]));
         System.out.println("\nCiculo 1 comparado Triangulo 0: "); // retorna -1
-        System.out.print(circle[1].CompareTo(trian[0]));
+        System.out.print(circle[1].compareTo(trian[0]));
         System.out.println("\nRectangulo 1 comparado Circulo 2: ");// retorna 1
-        System.out.print(rects[1].CompareTo(circle[2]));
+        System.out.print(rects[1].compareTo(circle[2]));
         System.out.println("\nCirculo 0 comparado Circulo 3: ");// retorna -1
-        System.out.print(circle[0].CompareTo(circle[3]));
+        System.out.print(circle[0].compareTo(circle[3]));
         System.out.println("\nRectangulo 3 comparado Rectangulo 0: ");// retorna 2
-        System.out.print(rects[3].CompareTo(rects[0]));
+        System.out.print(rects[3].compareTo(rects[0]));
 
     }
 }
