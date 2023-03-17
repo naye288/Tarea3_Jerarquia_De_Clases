@@ -1,4 +1,4 @@
-public class Circulo extends Figura implements Comparable<Circulo>{
+public class Circulo extends Figura implements Comparable<Figura>{
     private double radio;
     
     public Circulo(double radio) {
@@ -11,15 +11,18 @@ public class Circulo extends Figura implements Comparable<Circulo>{
     }
     
     @Override
-    public int CompareTo(Circulo cirPorComparar) {
-        double areaPorComparar = cirPorComparar.calcularArea();
+    public int CompareTo(Figura PorComparar) {
+        double areaPorComparar = PorComparar.calcularArea();
         double miArea = this.calcularArea();
         if(miArea==areaPorComparar){
-            return 0;
+            if (this.lados() == PorComparar.lados()){
+                return 0;  // areas y lados de ambas figuras iguales
+            }
+            return -2; // solo areas iguales
         }else if (miArea > areaPorComparar){
             return 1;
         }else{
-            return -1;
+            return -1; // areas diferentes
         }
     }
 
