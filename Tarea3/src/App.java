@@ -17,7 +17,7 @@ public class App {
         Arrays.sort(trian);
 
         Circulo[] circle= new Circulo[4];
-        circle[0] = new Circulo(2.5); // 19.63 area
+        circle[0] = new Circulo(1.09225); // 19.63 area
         circle[1] = new Circulo(1.7); // 9.07 area
         circle[2] = new Circulo( 3.1); // 30.19 area
         circle[3] = new Circulo(1.55); // 7.54 area
@@ -29,18 +29,18 @@ public class App {
          * el asunto es que solo logro que funcione la comparacion
          * cuando son del mismo tipo de clase.
         */
-        System.out.println("Triangulo 1 comparado Triangulo 2: "); // retorna -1
-        System.out.print(trian[1].compareTo(trian[2]));
-        System.out.println("\nTriangulo 3 comparado Triangulo 0: "); // retorna 1
-        System.out.print(trian[3].compareTo(trian[0]));
-        System.out.println("\nCiculo 1 comparado Circulo 0: "); // retorna -1
-        System.out.print(circle[1].compareTo(circle[0]));
-        System.out.println("\nRectangulo 1 comparado Rectangulo 2: ");// retorna 1
-        System.out.print(rects[1].compareTo(rects[2]));
-        System.out.println("\nCirculo 0 comparado Circulo 3: ");// retorna -1
-        System.out.print(circle[0].compareTo(circle[3]));
-        System.out.println("\nRectangulo 3 comparado Rectangulo 0: ");// retorna 2
-        System.out.print(rects[3].compareTo(rects[0]));
+        System.out.print("Area Triangulo 1= "+ trian[1].calcularArea()+" comparado Area Triangulo 2= "+trian[1].calcularArea() +" Retorna: "); 
+        System.out.println(trian[1].compareTo(trian[2]));
+        System.out.print("\nArea Ciculo 1= "+ circle[1].calcularArea()+" comparado Area Triangulo 0= "+trian[0].calcularArea() +" Retorna: ");  
+        System.out.println(circle[1].compareTo(trian[0]));
+        System.out.print("\nArea Ciculo 2= "+ circle[2].calcularArea()+" comparado Area Rectangulo 1= "+rects[1].calcularArea() +" Retorna: "); 
+        System.out.println(circle[2].compareTo(rects[1]));
+        System.out.print("\nArea Rectangulo 0= "+ rects[0].calcularArea()+" comparado Area Circulo 3= "+circle[3].calcularArea() +" Retorna: ");
+        System.out.println(rects[0].compareTo(circle[3]));
+        System.out.print("\nArea Circulo 0= "+ circle[0].calcularArea()+" comparado Area Rectangulo 0= "+rects[0].calcularArea() +" Retorna: ");
+        System.out.println(circle[0].compareTo(trian[3]));
+        System.out.print("\nArea Rectangulo 2= "+ rects[2].calcularArea()+"  comparado Area Triangulo 3= "+trian[3].calcularArea() +" Retorna: ");
+        System.out.println(rects[2].compareTo(rects[0]));
 
     }
 }
